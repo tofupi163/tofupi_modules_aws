@@ -1,0 +1,47 @@
+# ElastiCache 变量配置
+# required 标记为备注，表示变量是否必需
+
+variables:
+  prevent_destroy: true  # 防止销毁
+  
+  asset_id: null  # required | 资产 ID
+  
+  asset_name: null  # required | 资产名称
+  
+  asset_area_id: null  # required | 资产区域 ID
+  
+  asset_area_name: null  # required | 资产区域名称
+  
+  asset_group: null  # required | 资产组
+  
+  tags: null  # 标签
+  
+  mode: null  # required | cluster 或 replication_group
+  
+  az_mode: "single-az"  # 可用区模式
+  
+  cluster_id: null  # required | Cluster 或 Replication Group ID
+  
+  engine: null  # required | redis 或 memcached
+  
+  engine_version: null  # required | 引擎版本
+  
+  auto_minor_version_upgrade: true  # 是否自动升级小版本
+  
+  at_rest_encryption_enabled: true  # 是否启用静态加密
+  
+  automatic_failover_enabled: true  # 是否启用自动故障切换
+  
+  data_tiering_enabled: false  # 是否启用数据分层
+  
+  cluster_mode: false  # 是否启用 Redis Cluster Mode
+  
+  transit_encryption_enabled: true  # 是否启用传输加密
+  
+  transit_encryption_mode: "required"  # TLS 模式
+  
+  user_group_ids: []  # Redis ACL 用户组 ID 列表
+  
+  node_type: null  # required | 节点类型
+  
+  num_cache_nodes: 1  # 节点数

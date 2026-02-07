@@ -1,0 +1,39 @@
+# SQS 变量配置
+# required 标记为备注，表示变量是否必需
+
+variables:
+  prevent_destroy: true  # 防止销毁
+  
+  asset_id: null  # required | 资产 ID
+  
+  asset_name: null  # required | 资产名称
+  
+  asset_group: null  # required | 资产组
+  
+  short_name: null  # 短名称
+  
+  name: null  # required | SQS 队列名称
+  
+  fifo_queue: false  # 是否为 FIFO 队列
+  
+  content_based_deduplication: false  # FIFO 队列是否启用内容去重
+  
+  visibility_timeout_seconds: 30  # 消息可见性超时
+  
+  message_retention_seconds: 345600  # 消息保留时长
+  
+  delay_seconds: 0  # 消息延迟
+  
+  max_message_size: 262144  # 最大消息大小
+  
+  receive_wait_time_seconds: 0  # 长轮询等待时间
+  
+  kms_master_key_id: null  # 用于 SQS 加密的 KMS Key ARN
+  
+  kms_data_key_reuse_period_seconds: null  # KMS 数据密钥重用周期
+  
+  sqs_managed_sse_enabled: false  # 是否启用 SQS 托管加密
+  
+  policy: null  # SQS 队列访问策略
+  
+  redrive_policy: null  # 死信队列策略
